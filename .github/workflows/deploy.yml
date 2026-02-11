@@ -33,6 +33,8 @@ jobs:
 
       - name: Build
         run: bun run build
+        env:
+          VITE_BASE_PATH: /${{ github.event.repository.name }}/
 
       - name: Verify build output
         run: |
